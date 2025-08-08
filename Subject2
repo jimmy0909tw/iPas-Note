@@ -1,0 +1,1039 @@
+    <div class="key<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 應用規劃師考試筆記 (科目二)</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .main-title {
+            color: #2c3e50;
+            font-size: 2.2em;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
+        }
+        .chapter-title {
+            color: #e74c3c;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding: 10px 0;
+            border-left: 5px solid #e74c3c;
+            padding-left: 15px;
+            background-color: #ffeaea;
+        }
+        .section-title {
+            color: #2980b9;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            padding: 8px 0;
+            border-bottom: 2px solid #3498db;
+        }
+        .key-concept {
+            background-color: #e8f4fd;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .important {
+            color: #c0392b;
+            font-weight: bold;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .definition {
+            color: #27ae60;
+            font-weight: bold;
+        }
+        .example {
+            background-color: #f0f8ff;
+            border-left: 3px solid #17a2b8;
+            padding: 10px;
+            margin: 10px 0;
+            font-style: italic;
+            color: #495057;
+        }
+        .error-analysis {
+            background-color: #fff5f5;
+            border-left: 4px solid #e53e3e;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .error-title {
+            color: #e53e3e;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        .correct-answer {
+            color: #38a169;
+            font-weight: bold;
+        }
+        .white-talk {
+            background-color: #f7fafc;
+            border-left: 3px solid #68d391;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 3px;
+            color: #2d3748;
+        }
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+        li {
+            margin: 5px 0;
+        }
+        .comparison-table {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .vs {
+            color: #6c757d;
+            font-weight: bold;
+            font-style: italic;
+        }
+        .tech-term {
+            color: #6f42c1;
+            font-weight: bold;
+        }
+        .application {
+            color: #fd7e14;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-title">科目二：人工智慧應用與治理</div>
+    
+    <div class="chapter-title">第五章：人工智慧應用案例</div>
+
+    <div class="section-title">電腦視覺 (Computer Vision, CV)</div>
+
+    <div class="key-concept">
+        <strong class="important">定義與核心</strong>：主要處理和分析圖像和影片數據，讓電腦能辨識人臉、物體或場景。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">核心技術</strong>：圖像處理、特徵提取、物件檢測（語音識別不是）。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">延伸知識</strong>：光學字元識別<strong class="tech-term">(OCR)</strong>的主要用途是將圖片中的文字轉換成可編輯的文字格式。
+    </div>
+
+    <div class="white-talk">
+        <strong>白話比喻</strong>：想像這就像教會電腦「看東西」。當你拍一張照片，電腦能認出照片裡有什麼，比如這是個人、那是一輛車。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">實際應用範疇</strong>：
+        <ul>
+            <li><span class="application">零售業</span>：商品管理和智慧化結帳，例如透過圖像識別自動掃描商品，減少人工結帳時間。</li>
+            <li><span class="application">交通領域</span>：交通監控（監測車輛流量、識別違規行為）、智慧停車（透過電腦視覺技術識別車位、引導停車，提高停車效率）。自動駕駛（如Tesla Autopilot主要依賴電腦視覺技術來感知環境和輔助駕駛）。</li>
+            <li><span class="application">安全防護</span>：智慧化監控系統（人臉識別、行為分析、入侵檢測）（智慧醫療影像分析不屬於安全防護領域）。</li>
+            <li><span class="application">製造業</span>：生產線優化，能夠提高產品品質，進行缺陷檢測，例如檢測產品表面的瑕疵。</li>
+            <li><span class="application">醫療領域</span>：醫學影像分析（如X光、CT掃描圖像的病灶識別）、手術輔助（如達文西手術機器手臂利用電腦視覺技術輔助，提供精準的視覺引導和操作）（病歷管理系統不屬於此範疇）。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">其他</strong>：虛擬現實<strong class="tech-term">(VR)</strong>應用中結合電腦視覺技術來追蹤用戶動作和環境。物件檢測的典型應用範例是人臉識別。
+    </div>
+
+    <div class="error-analysis">
+        <div class="error-title">錯題詳解：以下哪一種神經網路縮寫是代表專門處理圖像數據的網路？</div>
+        <p><span class="correct-answer">正確答案：(C) CNN</span></p>
+        <p><strong class="important">解釋</strong>：CNN (Convolutional Neural Network, 卷積神經網路)是一種專門設計來處理網格狀數據（例如像素網格組成的圖像）的神經網路。它的核心是「卷積層」，能夠自動從圖像中提取特徵（如邊緣、紋理、形狀），並對圖像的平移、縮放等變化具有一定的不變性。</p>
+        <div class="white-talk">
+            <strong>白話比喻</strong>：就像一個「圖像處理專家」，它有一套特殊的「濾鏡」（卷積核），能自動從圖片中抓取關鍵的視覺特徵，而不用你一個個去教它。
+        </div>
+        <p><strong class="important">其他選項為何不正確</strong>：</p>
+        <ul>
+            <li>(A) RNN (Recurrent Neural Network, 循環神經網路)：設計來處理序列數據（如自然語言、語音），不專門處理圖像數據。</li>
+            <li>(B) LSTM (Long Short-Term Memory, 長短期記憶網路)：是RNN的一種特殊類型，解決長期依賴問題，主要用於序列數據。</li>
+            <li>(D) GAN (Generative Adversarial Network, 生成對抗網路)：是一種生成模型架構，用於生成逼真的新數據，而不是專門指「處理」圖像數據的網路類型。</li>
+        </ul>
+    </div>
+
+    <div class="error-analysis">
+        <div class="error-title">錯題詳解：影像處理中，「邊緣檢測演算法」（如<span class="tech-term">Canny</span>）的主要步驟包含哪一項？</div>
+        <p><span class="correct-answer">正確答案：(B) 高斯模糊</span></p>
+        <p><strong class="important">解釋</strong>：邊緣檢測的目的是識別圖像中物體輪廓的邊界。Canny邊緣檢測是一個多階段的演算法，其第一個也是非常關鍵的預處理步驟就是高斯模糊，目的是平滑圖像，去除雜訊，減少雜訊對邊緣檢測的干擾。</p>
+        <div class="white-talk">
+            <strong>白話比喻</strong>：想像你有一張模糊的照片，你想找出照片中所有物體的「輪廓線」。高斯模糊就像在找出輪廓線前，你先用橡皮擦把照片上一些不重要的、會干擾判斷的小點點（雜訊）模糊掉，讓輪廓線更容易浮現。
+        </div>
+        <p><strong class="important">其他選項為何不正確</strong>：</p>
+        <ul>
+            <li>(A) 音量調整：這是音頻處理的概念。</li>
+            <li>(C) 訓練語意模型：這是自然語言處理或機器學習領域的概念。</li>
+            <li>(D) 壓縮解壓縮：這是資料儲存和傳輸的技術。</li>
+        </ul>
+    </div>
+
+    <div class="error-analysis">
+        <div class="error-title">錯題詳解：實例分割（<span class="tech-term">Instance Segmentation</span>）與語義分割（<span class="tech-term">Semantic Segmentation</span>）的最大差異是？</div>
+        <p><span class="correct-answer">正確答案：(B) 實例分割區分同類物件的不同實例</span></p>
+        <div class="key-concept">
+            <strong class="important">解釋</strong>：
+            <ul>
+                <li><span class="tech-term">語義分割(Semantic Segmentation)</span>：將圖像中的每個像素都分配一個「類別標籤」（例如：人、樹、路、汽車等）。它不區分同一個類別中不同的個體。</li>
+                <li><span class="tech-term">實例分割(Instance Segmentation)</span>：不僅將圖像中的每個像素分配一個「類別標籤」，更重要的是，它還能<span class="highlight">「區分同一個類別中不同的個體實例」</span>。</li>
+            </ul>
+        </div>
+        <div class="white-talk">
+            <strong>白話比喻</strong>：
+            <ul>
+                <li><strong>語義分割</strong>：你有一張路上有很多車的照片。語義分割會把所有屬於「汽車」的像素都塗成紅色。它只關心「這是什麼類型的東西」，而不管「這是哪一輛車」。</li>
+                <li><strong>實例分割</strong>：同樣是那張有很多車的照片。實例分割不僅會把所有屬於「汽車」的像素都塗色，它還會把「第一輛車」塗成紅色，「第二輛車」塗成綠色，「第三輛車」塗成黃色。它不僅關心「這是什麼類型」，還關心「這是哪一個個體」。</li>
+            </ul>
+        </div>
+        <p><strong class="important">其他選項為何不正確</strong>：</p>
+        <ul>
+            <li>(A) 實例分割無法分類像素：錯誤。實例分割不僅分類像素，還能區分個體。</li>
+            <li>(C) 語義分割不能處理多物件：錯誤。語義分割可以處理多個物件。</li>
+            <li>(D) 語義分割只用於黑白圖：錯誤。兩者都廣泛應用於彩色圖像。</li>
+        </ul>
+    </div>
+
+    <div class="error-analysis">
+        <div class="error-title">錯題詳解：在<span class="tech-term">CNN</span>中，參數共享意味著什麼？</div>
+        <p><span class="correct-answer">正確答案：(B) 同一濾波器在整張圖上滑動</span></p>
+        <p><strong class="important">解釋</strong>：在CNN的卷積層中，一個特定的「濾波器」（<span class="tech-term">filter</span>或<span class="tech-term">kernel</span>）會被重複地應用（滑動）到輸入圖像的每一個局部區域上。每當這個濾波器滑動到一個新的位置時，它使用的權重和偏置項都是完全相同的。這就意味著，你只需要訓練一組濾波器的參數，就可以在圖像的任何位置檢測到相同的特徵，這也賦予了CNN對圖像平移的不變性。</p>
+        <div class="white-talk">
+            <strong>白話比喻</strong>：想像你作為一個圖像審查員，你手上只有「一個特定的印章」或「一個特定的放大鏡」來檢查圖片。參數共享就意味著，你每次檢查圖片上的一個小方塊時，你都用的是「同一個印章」或「同一個放大鏡」。這樣，你只需要學會怎麼用這一個印章，就能在圖片的任何地方找出你想找的那個特定圖案。
+        </div>
+        <p><strong class="important">其他選項為何不正確</strong>：</p>
+        <ul>
+            <li>(A) 不需訓練權重：錯誤。參數共享只是減少了需要訓練的權重數量，但這些共享的權重仍然需要透過訓練來學習。</li>
+            <li>(C) 每個像素都有專屬權重：錯誤。這會導致模型參數量巨大，容易過擬合。</li>
+            <li>(D) 權重變動性高：錯誤。參數共享恰恰是為了讓權重保持一致。</li>
+        </ul>
+    </div>
+
+    <div class="error-analysis">
+        <div class="error-title">錯題詳解：資料增強常見於哪一種任務？</div>
+        <p><span class="correct-answer">正確答案：(A) 圖像分類</span></p>
+        <p><strong class="important">解釋</strong>：資料增強是一種在機器學習中，特別是深度學習中，用來擴充訓練數據集的技術。它透過對現有數據進行一些微小但有意義的變換（如旋轉、翻轉、裁剪、縮放、調整亮度對比度等），來生成新的、但本質上相同的數據樣本。這樣做的目的通常是增加數據多樣性，防止模型過擬合，並提高模型的泛化能力。</p>
+        <div class="white-talk">
+            <strong>白話比喻</strong>：想像你只有100張貓的圖片來訓練AI辨識貓。資料增強就像你拿著這100張圖，進行各種「加工」：把圖片「左右翻轉」、稍微「旋轉一下」、調整一下「亮度」、或者「裁剪」一下局部。這樣，你就能從這100張圖變出1000張甚至更多的「看起來有點不一樣，但本質還是貓」的圖片，讓AI有更多角度去學習貓的特徵。
+        </div>
+        <p><strong class="important">其他選項為何不正確</strong>：</p>
+        <ul>
+            <li>(B) 資料庫管理：主要處理數據的儲存、查詢、更新和組織，與資料增強的概念無關。</li>
+            <li>(C) 網路連線：與資料傳輸和通訊相關，與資料增強無關。</li>
+            <li>(D) GPU分配：是關於計算資源的管理，與資料增強本身的方法無關。</li>
+        </ul>
+    </div>
+
+    <div class="section-title">自然語言處理 (Natural Language Processing, NLP)</div>
+
+    <div class="key-concept">
+        <strong class="important">定義與核心</strong>：讓電腦理解、解釋和生成人類語言，應用於翻譯、寫文章、語音助理。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">核心技術</strong>：語音識別和語義分析。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">應用範疇</strong>：
+        <ul>
+            <li><span class="application">情感分析(Sentiment Analysis)</span>：主要用於分析客戶反饋，改進服務品質，例如分析社交媒體評論判斷消費者對產品的態度。語義分析技術可應用於情感分析和主題識別。</li>
+            <li><span class="application">智慧客服系統</span>：能夠提供<span class="highlight">24/7</span>服務並減少人工客服壓力，提升客戶滿意度。</li>
+            <li><span class="application">金融業</span>：檢測金融欺詐行為並減少損失、市場分析以提供投資建議、風險管理以識別潛在風險（不包括道路監控）。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">智慧文件處理</strong>：包括理解和生成自然語言文本、理解文件內容、提取關鍵資訊和進行自動化處理（圖像邊緣檢測不屬於其核心技術）。透過智慧文件處理技術可以識別交易中的潛在風險和機會。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">其他</strong>：自動生成市場研究報告、判斷新聞的真偽、語音詐騙辨識。
+    </div>
+
+    <div class="error-analysis">
+        <div class="error-title">錯題詳解：詞嵌入（<span class="tech-term">Word Embedding</span>）在自然語言處理（<span class="tech-term">NLP</span>）中的主要目的是什麼？</div>
+        <p><span class="correct-answer">正確答案：(B) 轉換詞語為向量，以捕捉語義關聯性</span></p>
+        <p><strong class="important">解釋</strong>：詞嵌入是一種將自然語言中的單詞（或詞組）轉換成「數字向量」的技術。這些向量經過特殊訓練，使得在向量空間中，語義相似的詞語會靠得比較近，語義不相似的詞語則會比較遠。這使得電腦能夠「理解」詞語的語義並處理它們之間複雜的關係。</p>
+        <div class="white-talk">
+            <strong>白話比喻</strong>：想像你把每個詞都變成了一個「座標點」在一個多維度的地圖上。語義相似的詞（如「國王」和「女王」）會在地圖上靠得很近。透過向量運算，甚至可以發現語義關係，如：「國王」 - 「男人」 + 「女人」 ≈ 「女王」。
+        </div>
+        <p><strong class="important">其他選項為何不正確</strong>：</p>
+        <ul>
+            <li>(A) 計算單詞的頻率：詞嵌入的重點在於詞語的「意義」和「關係」，而不是單純計算出現次數。</li>
+            <li>(C) 減少文本的長度：這是文本壓縮或摘要的目的，與詞嵌入無關。</li>
+            <li>(D) 進行語法分析：語法分析旨在理解句子的結構和詞語的語法角色，雖然詞嵌入可以輔助語法分析，但其主要目的不是直接進行語法分析。</li>
+        </ul>
+    </div>
+
+    <div class="error-analysis">
+        <div class="error-title">錯題詳解：情感分析屬於下列哪種任務類型？</div>
+        <p><span class="correct-answer">正確答案：(B) 分類任務</span></p>
+        <p><strong class="important">解釋</strong>：情感分析的目標是識別、提取和量化文本數據中表達的情感傾向，通常是判斷一段文字是積極的、消極的還是中立的。這符合分類任務的定義，即將數據點歸類到預先定義的類別中。</p>
+        <div class="white-talk">
+            <strong>白話比喻</strong>：就像一個「情緒偵探」，它會閱讀一段文字，然後判斷作者的心情是「開心」、「不開心」還是「沒什麼感覺」，然後把這段文字歸類到特定的情緒標籤。
+        </div>
+        <p><strong class="important">其他選項為何不正確</strong>：</p>
+        <ul>
+            <li>(A) 生成任務：生成任務是指模型創造出全新的內容。情感分析的目標是判斷現有文本的情感。</li>
+            <li>(C) 聚類任務：聚類任務是非監督式學習，旨在將相似的數據點自動分組。情感分析需要預先定義好情感類別。</li>
+            <li>(D) 強化學習任務：強化學習涉及代理人在環境中通過試錯來學習。情感分析不是這種互動學習的模式。</li>
+        </ul>
+    </div>
+
+    <div class="error-analysis">
+        <div class="error-title">錯題詳解：文本預處理不包含下列哪一項？</div>
+        <p><span class="correct-answer">正確答案：(C) 增加模型參數</span></p>
+        <div class="key-concept">
+            <strong class="important">解釋</strong>：
+            <ul>
+                <li><span class="tech-term">文本預處理(Text Preprocessing)</span>：在自然語言處理（NLP）中，文本預處理是指在將原始文本數據輸入到模型之前，對其進行一系列的清洗、轉換和標準化操作。目的在於提高數據品質，減少雜訊，並使文本更適合模型處理。</li>
+                <li><span class="tech-term">增加模型參數(Increasing Model Parameters)</span>：模型參數是模型在訓練過程中學習到的內部數值。增加模型參數通常意味著使模型變得更大、更複雜，這是在模型設計或優化階段的考量，而不是文本預處理的範疇。</li>
+            </ul>
+        </div>
+        <div class="white-talk">
+            <strong>白話比喻</strong>：文本預處理是把零件（文本數據）擦乾淨、整理好。而「增加模型參數」則是在討論要不要買更高級的處理器、更多的記憶體，讓電腦本身的功能更強大。這是兩個不同的層面。
+        </div>
+        <p><strong class="important">其他選項為何不正確</strong>：</p>
+        <ul>
+            <li>(A) 停用詞移除：移除頻繁出現但對語義貢獻小的詞，是常見的文本預處理步驟。</li>
+            <li>(B) 轉小寫：避免模型將同一個詞的不同大小寫形式視為不同詞，是常見的文本預處理步驟。</li>
+            <li>(D) 詞幹化或詞形還原：將單詞還原到其詞幹或基本形式，是常見的文本預處理步驟。</li>
+        </ul>
+    </div>
+
+    <div class="error-analysis">
+        <div class="error-title">錯題詳解：<span class="tech-term">Hugging Face</span>是哪個領域的模型開發領導平台？</div>
+        <p><span class="correct-answer">正確答案：(B) 自然語言處理（NLP）</span></p>
+        <p><strong class="important">解釋</strong>：Hugging Face以其開源函式庫（尤其是transformers函式庫）和模型中心（Hugging Face Hub）而聞名。它最初因在自然語言處理(NLP)領域提供大量預訓練模型和工具而迅速崛起，極大地推動了NLP研究和應用的發展。</p>
+        <div class="white-talk">
+            <strong>白話比喻</strong>：想像Hugging Face就像一個「AI模型的圖書館和工具箱」。特別是對於NLP領域，它提供了各種現成的「百科全書」（預訓練模型），以及一套套方便你「閱讀、理解和撰寫」語言的「工具」（函式庫），讓你在處理文字相關的AI任務時事半功倍。
+        </div>
+        <p><strong class="important">其他選項為何不正確</strong>：</p>
+        <ul>
+            <li>(A) 圖像處理：雖然現在Hugging Face Hub上也包含了許多圖像處理模型，但它最初和最核心的崛起是從NLP開始。</li>
+            <li>(C) 音樂生成：不是Hugging Face的主要專注領域。</li>
+            <li>(D) 簡報製作：與AI模型開發平台的核心功能無關。</li>
+        </ul>
+    </div>
+
+    <div class="error-analysis">
+        <div class="error-title">錯題詳解：以下哪一種模型用於語音識別？</div>
+        <p><span class="correct-answer">正確答案：(C) 隱馬爾可夫模型（HMM）</span></p>
+        <p><strong class="important">解釋</strong>：語音識別是將人類的語音信號轉換成文字。隱馬爾可夫模型（<span class="tech-term">HMM</span>）在過去（尤其是在深度學習興起之前）是語音識別領域的「核心」和「基石」模型。它是一種統計模型，用於處理具有隱藏狀態的時間序列數據。語音信號是可觀測的「符號」，而背後的「發音單元」（如音素或詞語）則是隱藏的狀態。HMM擅長捕捉時間序列中的序列關係和狀態轉換。</p>
+        <div class="white-talk">
+            <strong>白話比喻</strong>：HMM就像一個「猜謎大師」。它聽到你說話的聲音（可觀測的線索），然後它要根據這些聲音，推斷出你內心真正想說的詞句（隱藏的狀態），而且它知道詞句之間是如何相互連接的。
+        </div>
+        <p><strong class="important">其他選項為何不正確</strong>：</p>
+        <ul>
+            <li>(A) SVM (Support Vector Machine, 支援向量機)：不適合處理長序列的語音信號。</li>
+            <li>(B) K-Means (K均值)：無法直接用於將語音轉換為文字。</li>
+            <li>(D) 決策樹 (Decision Tree)：不適合直接處理複雜的語音序列數據。</li>
+        </ul>
+    </div>
+
+    <div class="section-title">生成式AI的多元應用</div>
+
+    <div class="key-concept">
+        <strong class="important">通用應用</strong>：可用於文學創作、藝術設計、音樂創作等領域。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">文本生成</strong>：
+        <ul>
+            <li><span class="tech-term">ChatGPT</span>：主要用於文本生成，其用途包含文字創作、翻譯、文本摘要、<span class="tech-term">email</span>生成、文案生成、程式碼生成。ChatGPT在模型評測中在速度<span class="highlight">(SPEED)</span>方面表現最佳。</li>
+            <li><span class="tech-term">Codex(及類似程式碼生成AI)</span>：透過自動補全程式碼、生成完整函式、分析錯誤並提供修正建議，大幅提升開發者的生產力。其優勢在於能夠理解複雜的自然語言描述並轉換為程式碼。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">圖像生成</strong>：
+        <ul>
+            <li><span class="tech-term">DALL-E</span>：是一個強大的圖像生成模型，可以根據文本提示創建、修改各種藝術風格的圖像。微調結果可透過變更文本提示、提供現有圖像進行修改、調整藝術風格。例如幫助企業根據市場趨勢產生新產品設計。</li>
+            <li><span class="tech-term">其他生成圖像工具(e.g., Stable Diffusion, DALL-E 3, Midjourney)</span>：用途包括<span class="tech-term">AI</span>繪圖、風格轉換、圖像合成、藝術生成、圖像修復、設計創作、繪本創作。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">影片生成</strong>：
+        <ul>
+            <li><span class="tech-term">Stable Video Diffusion</span>：一種AI模型，能夠從文字提示或圖像生成影片。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">特定產業應用</strong>：
+        <ul>
+            <li><span class="application">金融業</span>：風險評估與管理、投資組合優化、提供個人化投資建議（不包括自動化生成病歷）。AI在投資決策中能處理大量數據、找出趨勢、減少分析時間、提高決策準確度。生成式AI在金融業透過檢索增強生成<span class="tech-term">(RAG)</span>結合內部知識庫，可以從最新的財報和分析報告中檢索資訊，提供更精確的投資建議。</li>
+            <li><span class="application">醫療領域</span>：生成式AI應用於簡化稽核流程、自動化病房記錄、加速照護資源媒合（不包括硬體組裝）。</li>
+            <li><span class="application">製造業</span>：AI可以透過分析能源數據、提供節能建議和自動調整設備運行來幫助工廠降低能源消耗。</li>
+            <li><span class="application">消費電子產品</span>：透過AI生成新產品設計方案、進行快速原型設計與測試、根據市場趨勢提供設計建議，提升設計創新。</li>
+            <li><span class="application">氣象預測</span>：Google DeepMind的<span class="tech-term">GraphCast</span>主要應用於氣象預測。</li>
+            <li><span class="application">客服自動化</span>：透過生成式AI提供更個性化、高效的客戶服務，處理複雜問題並提升滿意度。</li>
+            <li><span class="application">教育</span>：可汗學院結合GPT-4推出線上教學平台，其功能包括根據學生程度提供建議和引導式學習、協助老師評估學生程度、協助老師產出課程大綱和考卷（不直接提供答案）。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">其他AI應用類型</strong>：
+        <ul>
+            <li><span class="tech-term">智慧控制(Smart Control)</span>：透過AI技術自動控制和調整系統或設備，實現最佳運行狀態。</li>
+            <li><span class="tech-term">智慧優化(Smart Optimization)</span>：透過AI技術尋找最佳解決方案，提高效率、降低成本、提升性能。</li>
+            <li><span class="tech-term">智慧分析(Smart Analysis)</span>：透過AI技術對複雜數據進行深入挖掘、模式識別和趨勢分析，提供洞察。</li>
+            <li><span class="tech-term">智慧安全(Smart Security)</span>：透過AI技術提升網路安全、數據保護、身份驗證、威脅檢測等能力。</li>
+        </ul>
+    </div>
+
+    <div class="chapter-title">第六章：No-Code / Low-Code 平台</div>
+
+    <div class="section-title">基本概念與特點(比較)</div>
+
+    <div class="comparison-table">
+        <div class="key-concept">
+            <strong class="important">No-Code 平台</strong>：
+            <ul>
+                <li><span class="definition">定義與運作原理</span>：主要依靠圖形化介面<span class="tech-term">(UI)</span>進行開發，透過拖放式介面、視覺化配置，無需撰寫程式碼。其設計風格類似PowerPoint的直觀視覺化設計。</li>
+                <li><span class="definition">目標</span>：降低技術門檻，使非技術背景的使用者（如行銷人員或產品經理）也能輕鬆構建應用程式。</li>
+                <li><span class="definition">主要用途</span>：快速建立簡單工具和最小可行產品<span class="tech-term">(MVP)</span>。最適合資源有限的中小企業。</li>
+                <li><span class="definition">內建功能</span>：許多平台內建AI和自動化功能（如RPA、工作流程自動化）以提高開發效率。</li>
+            </ul>
+        </div>
+
+        <div class="key-concept">
+            <strong class="important">Low-Code 平台</strong>：
+            <ul>
+                <li><span class="definition">定義與運作原理</span>：結合了簡單程式設計與視覺化工具，透過圖形化開發降低程式碼需求，提高開發速度。允許開發者寫部分程式碼來擴展功能，能進行客製化並具備較大的靈活性與擴展性。</li>
+                <li><span class="definition">目標</span>：減少重複編碼，提高開發效率。</li>
+                <li><span class="definition">適合開發者</span>：最適合<span class="tech-term">IT</span>部門和企業開發者。</li>
+                <li><span class="definition">適合應用</span>：具備較高的靈活性和擴展性，適合開發複雜的企業級應用、<span class="tech-term">ERP</span>、<span class="tech-term">AI</span>、跨系統整合，例如企業內部應用、數據管理、流程自動化工具。</li>
+                <li><span class="definition">內建特性</span>：通常內建數據庫和API整合功能，以支持企業級應用開發。</li>
+                <li><span class="definition">降低IT部門負擔</span>：允許業務人員開發應用，降低IT依賴。</li>
+            </ul>
+        </div>
+
+        <div class="key-concept">
+            <strong class="important">總結比較</strong>：No-Code幫助業務人員快速開發，Low-Code幫助IT人員快速開發。Low-Code平台通常提供跨平台部署和整合能力。
+        </div>
+    </div>
+
+    <div class="section-title">No-Code / Low-Code 的優勢與限制</div>
+
+    <div class="key-concept">
+        <strong class="important">主要優勢</strong>：
+        <ul>
+            <li>加速開發流程，降低企業開發成本。</li>
+            <li>運用模板快速建立應用程式。</li>
+            <li>幫助非技術人員創建應用和自動化流程。</li>
+            <li>加速企業數位轉型並提升競爭力。</li>
+            <li>開發速度快5-10倍，降低產品上市時間。</li>
+            <li>方便協作。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">限制</strong>：
+        <ul>
+            <li>無法完全消除對專業技術人員的需求，尤其在高度客製化或複雜邏輯的應用中，它們不能完全取代專業技術人員。</li>
+            <li><span class="highlight">供應商鎖定(Vendor Lock-in)</span>：可能影響長期靈活性，一旦深度使用某個平台，未來要轉換到其他平台的成本會非常高。</li>
+            <li>功能與客製化彈性有限。</li>
+            <li>安全性與資料治理挑戰：雲端平台的資料存取可能帶來內部安全風險。</li>
+            <li>效能與擴展性問題：當使用者數量或資料突然暴增時，需特別留意。</li>
+            <li>非零開發成本。</li>
+            <li>不能完全取代人類創意。</li>
+            <li>使用者缺乏對AI的深層理解，可能引發模型偏差或誤用。</li>
+        </ul>
+    </div>
+
+    <div class="section-title">平台選擇與實際應用範例</div>
+
+    <div class="key-concept">
+        <strong class="important">選擇考量</strong>：平台的技術整合能力和自訂性是考慮功能與擴展性時最重要的因素。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">應用場景與工具範例</strong>：
+        <ul>
+            <li>客戶服務聊天機器人：Microsoft Power Virtual Agents。</li>
+            <li>內部<span class="tech-term">CRM</span>系統：OutSystems。</li>
+            <li><span class="tech-term">AI</span>驅動的數據分析平台：DataRobot。</li>
+            <li>無編碼網站設計：Webflow、Bubble。</li>
+            <li>內部工作流程自動化：Zapier。</li>
+            <li>電子商務與網站開發：Shopify。</li>
+            <li><span class="tech-term">AI</span>繪圖應用：Midjourney。</li>
+            <li><span class="tech-term">AI</span>影片生成：Stable Video Diffusion。</li>
+            <li><span class="tech-term">AI</span>語音辨識/詐騙辨識：機器學習與語音辨識技術。</li>
+            <li><span class="tech-term">AI</span>市場研究報告生成：自然語言處理技術。</li>
+        </ul>
+    </div>
+
+    <div class="chapter-title">第七章：人工智慧治理、倫理與風險</div>
+
+    <div class="section-title">AI 治理 (AI Governance)</div>
+
+    <div class="key-concept">
+        <strong class="important">主要目的與運作原理</strong>：建立一套管理AI系統開發、部署和使用的框架，確保其符合倫理、法律和社會規範。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">國際合作重要性</strong>：統一AI發展標準、避免AI技術的濫用、促進AI技術的轉移。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">AI責任性規範(Accountability)</strong>：確保AI由人類負責監管與決策。
+    </div>
+
+    <div class="section-title">負責任 AI (Responsible AI, RAI)</div>
+
+    <div class="key-concept">
+        <strong class="important">核心理念與目標</strong>：以安全、可靠、道德的方式開發AI。最終目標是促進人類進步。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">核心原則</strong>：強調透明性、安全可靠和公平性。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">經濟領域目標</strong>：確保公平競爭，防止AI技術導致市場壟斷或不公平的商業行為。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">法律與政策支持</strong>：確保技術應用符合道德標準。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">社會公平</strong>：需要防止社會不公與隱私侵害，以確保AI造福社會。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">核心價值觀</strong>：公平性、可靠性與安全性、問責性（不包括獨佔市場）。
+    </div>
+
+    <div class="section-title">AI 倫理與隱私</div>
+
+    <div class="key-concept">
+        <strong class="important">數據倫理</strong>：確保數據的收集、使用和分享符合道德原則，保護個人隱私和權利。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">隱私權考量</strong>：保護個人數據、防止數據濫用、確保合規性。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">保障AI隱私與保密性</strong>：設定存取權限、資料加密、限制網絡通訊。
+    </div>
+
+    <div class="comparison-table">
+        <div class="key-concept">
+            <strong class="important">資料隱私(Data Privacy) <span class="vs">vs</span> 資料安全(Data Security) (比較)</strong>：
+            <ul>
+                <li><span class="tech-term">資料隱私</span>：關注個人數據在收集、儲存、使用和分享過程中，如何保護個人權利和自由。</li>
+                <li><span class="tech-term">資料安全</span>：關注保護數據免受未經授權的訪問、損壞或洩露。</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">通用資料保護條例(GDPR)</strong>：歐盟GDPR規範AI資料使用與AI的隱私與倫理問題相關。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">隱私增強技術(PETs)</strong>：
+        <ul>
+            <li><span class="definition">運作原理與目的</span>：在不犧牲數據可用性的前提下，保護個人隱私。</li>
+            <li><span class="definition">實際案例</span>：
+                <ul>
+                    <li><span class="tech-term">差分隱私(Differential Privacy)</span>：透過向數據添加隨機噪音，提供數學上可證明的隱私保護。</li>
+                    <li><span class="tech-term">聯邦學習(Federated Learning)</span>：允許在不共享原始數據的情況下，在多個分散式設備上訓練<span class="tech-term">AI</span>模型。</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">PII (Personally Identifiable Information)</strong>：個人可識別資訊，如姓名、身份證號碼、地址等。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">零信任架構(Zero Trust Architecture, ZTA)</strong>：不論內外部，任何使用者或設備在訪問資源前都必須經過驗證。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">資料主權(Data Sovereignty)</strong>：數據受到其所在國家法律的管轄，即便該數據被跨國公司持有或處理。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">透明與保密的權衡</strong>：過於透明的揭露可能會危及商業或研發機密的保護。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">資料安全性</strong>：AI服務公司必須證明其資料保護能力，特別是處理敏感資料請求時。
+    </div>
+
+    <div class="section-title">AI 公平性與包容性</div>
+
+    <div class="key-concept">
+        <strong class="important">公平性(Fairness)</strong>：
+        <ul>
+            <li><span class="definition">運作原理與目標</span>：確保AI系統對所有用戶一視同仁，不產生歧視或偏見。</li>
+            <li><span class="definition">如何確保AI公平性</span>：確保數據多樣性、採取公平演算法、測試<span class="tech-term">AI</span>是否存在偏見。</li>
+            <li><span class="definition">實際案例(負責任AI儀表板的公平性評估元件)</span>：主要關注敏感群體的公平性。資料科學家可以使用該元件來評估AI模型，了解模型在不同敏感群體中的表現。</li>
+            <li><span class="definition">原因</span>：訓練數據中某些群體的樣本較少，可能導致模型預測結果出現顯著差異。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">配置損害(Allocation Harm)</strong>：
+        <ul>
+            <li><span class="definition">可能發生場景</span>：職位招聘、信貸評分、教育錄取等AI應用場景中，AI系統可能會因為偏見而導致某些群體錯失機會。</li>
+            <li><span class="definition">減少方法</span>：使用多樣性數據訓練<span class="tech-term">AI</span>。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">AI服務品質損害</strong>：
+        <ul>
+            <li><span class="definition">實際範例</span>：AI語音識別對某些口音準確度較低，導致部分用戶體驗不佳。</li>
+            <li><span class="definition">減少方法</span>：提高AI的數據多樣性。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">評估AI公平性</strong>：透過群組公平方法。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">AI包容性(Inclusivity)</strong>：
+        <ul>
+            <li><span class="definition">確保方法</span>：減少模型偏見、設計適應不同人群的介面、增強多樣性測試。</li>
+            <li><span class="definition">技術支援</span>：語音識別、視覺辨識、文字到語音轉換等技術都能幫助AI系統支持包容性。</li>
+            <li><span class="definition">對視力障礙者</span>：可採取加入語音提示、使用大字體模式、提供多模態交互方式。</li>
+            <li><span class="definition">總結</span>：強化對特殊需求群體的適應性，確保AI造福所有人。</li>
+            <li><span class="definition">設計與部署考量</span>：多樣性與公平性、消除系統偏見、促進機會均等。</li>
+            <li><span class="definition">減少對特定群體的歧視</span>：多樣化數據訓練、偏見檢測與修正、透明度與問責機制。</li>
+        </ul>
+    </div>
+
+    <div class="section-title">AI 風險管理與監控</div>
+
+    <div class="key-concept">
+        <strong class="important">風險評估</strong>：
+        <ul>
+            <li><span class="definition">目的與運作原理</span>：主要目的是評估風險的影響與發生可能性，以便制定應對策略。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">AI錯誤分析</strong>：
+        <ul>
+            <li><span class="definition">目的</span>：識別高錯誤率的資料子集、避免模型對某些群體產生偏差、提高AI準確性與公平性。</li>
+            <li><span class="definition">幫助改進</span>：增強錯誤識別能力、提升AI的透明度、幫助開發人員診斷錯誤、找出系統弱點、修正高錯誤率的資料子集、提升模型準確性與穩定性。</li>
+            <li><span class="definition">與彙總精確度計量分開(比較)</span>：能更精確地識別問題區域、提高模型的公平性、讓開發者能更有效改進AI。</li>
+            <li><span class="definition">實際影響場景</span>：自動駕駛、醫療診斷、生產瑕疵檢測。</li>
+            <li><span class="definition">影響因素</span>：訓練數據的品質、目標變數的定義、資料分布的均勻性。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">AI幻覺 (AI Hallucination)</strong>：
+        <ul>
+            <li><span class="definition">定義與運作原理</span>：AI模型生成看似合理但實際上是錯誤或虛構的內容。</li>
+            <li><span class="definition">處理</span>：應建立人工審核機制與事實核查流程。</li>
+        </ul>
+        <div class="white-talk">
+            <strong>白話比喻</strong>：想像一名律師使用ChatGPT進行法律研究，AI為他引用了數個看起來非常專業的法院判例。然而，當律師將這些判例提交給法院後，卻被法官發現這些判例全都是AI憑空捏造的，導致該律師面臨懲戒。這強調了對AI生成內容進行事實核查的絕對必要性。
+        </div>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">對抗性攻擊 (Adversarial Attacks)</strong>：
+        <ul>
+            <li><span class="definition">運作原理</span>：透過微小、難以察覺的輸入擾動，欺騙AI模型產生錯誤或不正確的輸出。</li>
+        </ul>
+        <div class="white-talk">
+            <strong>白話比喻</strong>：研究人員在一個「停止」路標上貼上幾個小小的黑色和白色貼紙，人類駕駛看起來仍然是停止標誌，但搭載電腦視覺的自動駕駛汽車卻可能將其誤判為「速限80公里」的標誌，從而造成致命危險。
+        </div>
+
+<div class="key-concept">
+        <strong class="important">模型監控 (Model Monitoring)</strong>：
+        <ul>
+            <li><span class="definition">運作原理</span>：持續追蹤模型在實際運行中的性能、數據漂移和潛在問題，及時調整和優化。</li>
+        </ul>
+        <div class="white-talk">
+            <strong>白話比喻</strong>：你可以把 AI 模型 比作一個在醫院工作的醫生，而模型監控就是為這位醫生定期做的健康檢查，透過這些「健康檢查」，我們就能及早發現 AI 模型這個「醫生」的潛在問題，然後可以進行「治療」（例如重新訓練模型、更新數據、調整模型參數），確保它能夠持續穩定、準確、公平地為我們服務。
+        </div>
+    </div>
+
+
+    <div class="key-concept">
+        <strong class="important">數據漂移 (Data Drift)</strong>：
+        <ul>
+            <li><span class="definition">運作原理</span>：訓練數據與實際應用數據分布不一致，可能導致模型性能下降。</li>
+        </ul>
+        <div class="white-talk">
+            <strong>白話比喻</strong>：一個根據2019年數據訓練的流感預測模型，在COVID-19疫情爆發後，其預測會完全失效，因為人們的衛生習慣和社交行為（數據分佈）發生了巨大變化。這就是數據漂移，因此模型需要持續監控和更新。
+        </div>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">可追溯性 (Traceability)</strong>：
+        <ul>
+            <li><span class="definition">重要性</span>：方便追蹤數據源和模型決策過程，有助於問題分析、錯誤修正和責任歸屬。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">人類在環 (Human-in-the-loop)</strong>：
+        <ul>
+            <li><span class="definition">運作原理</span>：確保人類專家參與關鍵決策或監控AI輸出，以提高準確性、倫理性和安全性。</li>
+        </ul>
+    </div>
+
+    <div class="error-analysis">
+        <div class="error-title">錯題詳解：大規模生物識別系統在歐盟<span class="tech-term">AI</span>法案中被歸類為何種風險？</div>
+        <p><span class="correct-answer">正確答案：(D) 禁止類</span></p>
+        <p><strong class="important">解釋</strong>：歐盟AI法案（EU AI Act）採用基於風險的分類方法。不可接受的風險（<span class="tech-term">Unacceptable Risk</span>）/ 禁止類AI系統被認為對人類的基本權利構成不可接受的威脅，因此在歐盟境內是完全被禁止的。大規模的實時遠程生物識別系統（如在公共場所進行人臉識別以監控人群）即屬此類，因為其對隱私和基本權利構成潛在巨大威脅。</p>
+        <div class="white-talk">
+            <strong>白話比喻</strong>：這就像交通法規中，「開車在人行道上撞人」這種行為是被絕對禁止的，因為它對生命安全構成直接且無法接受的威脅。
+        </div>
+        <p><strong class="important">其他選項為何不正確</strong>：</p>
+        <ul>
+            <li>(A) 最小風險：絕大多數AI系統屬於這一類，幾乎不受管制（如垃圾郵件過濾）。</li>
+            <li>(B) 有限制風險：這類AI系統需要滿足特定的透明度義務（如聊天機器人需告知用戶是AI）。</li>
+            <li>(C) 高風險：這類AI系統可能對健康、安全或基本權利產生重大影響，需要嚴格遵守法規要求（如用於關鍵基礎設施的AI）。</li>
+        </ul>
+    </div>
+
+    <div class="chapter-title">第八章：企業導入 AI 流程與管理</div>
+
+    <div class="section-title">企業導入 AI 流程(典型順序)</div>
+
+    <div class="key-concept">
+        <strong class="important">規劃階段</strong>：
+        <ul>
+            <li><span class="highlight">第一步</span>：設定明確且可量化的經營目標，或明確當前的業務痛點和問題。</li>
+            <li><span class="definition">問題識別</span>：評估導入生成式AI時，需識別市場趨勢預測能力有限等問題領域。</li>
+            <li><span class="definition">IT環境支援</span>：需具備高效能運算資源與彈性儲存空間，以支援AI模型訓練與推理。</li>
+            <li><span class="definition">數據安全與隱私</span>：權限控管與合規要求最重要。</li>
+            <li><span class="definition">成本評估</span>：進行詳細的成本效益分析。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">設計階段</strong>：
+        <ul>
+            <li><span class="highlight">首要步驟</span>：定義問題和目標。</li>
+            <li><span class="definition">數據準備</span>：確保數據質量和可用性。</li>
+            <li><span class="definition">應用情境</span>：與業務部門協作，確保與實際業務流程和需求緊密結合。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">評估與選擇</strong>：
+        <ul>
+            <li><span class="definition">關鍵因素</span>：清晰定義痛點、技術匹配、培養人才。</li>
+            <li><span class="definition">方案評估</span>：關注企業的資源與AI方案的匹配度。</li>
+            <li><span class="definition">優先順序</span>：根據AI應用的潛在價值和可行性。</li>
+            <li><span class="definition">生成式AI工具評估</span>：考量模型的生成品質與準確性、訓練成本、易用性與整合能力（而非物理尺寸）。</li>
+            <li><span class="definition">機器學習模型選擇</span>：需考慮訓練時間與資源需求。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">實施階段</strong>：
+        <ul>
+            <li><span class="highlight">優先進行</span>：確保相關人員熟悉新流程與工具。</li>
+            <li><span class="definition">跨部門合作與溝通</span>：持續進行是確保專案成功的關鍵因素。</li>
+            <li><span class="definition">員工能力提升</span>：安排跨部門交流和測試專案有助於員工快速掌握AI技術與應用。</li>
+            <li><span class="highlight">最直接影響</span>：提升生產力和效率。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">部署後管理</strong>：
+        <ul>
+            <li><span class="definition">持續優化</span>：定期監測模型表現，並根據實際反饋進行迭代優化。</li>
+            <li><span class="definition">保持有效性</span>：定期監測模型性能並根據新數據進行調整。</li>
+            <li><span class="definition">追蹤使用情況</span>：使用日誌記錄。</li>
+            <li><span class="definition">掌握最新資訊</span>：掌握國內外大廠最新資訊與產業發展趨勢。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">AI導入步驟順序(總結)</strong>：數據準備、選擇模型、訓練模型、驗證模型、持續學習與更新模型。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">敏捷開發 (Agile Development) (延伸知識)</strong>：
+        <ul>
+            <li><span class="definition">運作原理與優勢</span>：透過迭代和增量的方式，快速回應需求變化，提高專案靈活性和成功率。</li>
+        </ul>
+    </div>
+
+    <div class="error-analysis">
+        <div class="error-title">錯題詳解：在<span class="tech-term">AI</span>應用中，若需將模型部署於企業自有伺服器與內網，常見於何種需求場域？</div>
+        <p><span class="correct-answer">正確答案：(C) 地端部署</span></p>
+        <p><strong class="important">解釋</strong>：地端部署<span class="tech-term">(On-Premises Deployment)</span>指將AI模型、相關的硬體和軟體系統部署在企業自己的實體伺服器、數據中心和內部網絡中。這意味著企業擁有並管理所有的基礎設施。通常出於數據安全、合規性、延遲要求或成本控制等考量。</p>
+        <div class="white-talk">
+            <strong>白話比喻</strong>：你的機器人就在你自己的「公司大樓裡」工作，運行在你們公司自己的「機房」裡，使用的都是你們公司買的設備和網路。
+        </div>
+        <p><strong class="important">其他選項為何不正確</strong>：</p>
+        <ul>
+            <li>(A) 雲端部署：指將AI模型部署到第三方雲端基礎設施上，不符合「企業自有伺服器與內網」。</li>
+            <li>(B) 邊緣運算：指將計算盡可能地靠近數據生成的地方（「邊緣設備」），通常不是指企業內部資料中心的環境。</li>
+            <li>(D) 分散式儲存：是一種數據儲存架構，而非模型部署的整體策略。</li>
+        </ul>
+    </div>
+
+    <div class="section-title">MLOps (Machine Learning Operations)</div>
+
+    <div class="key-concept">
+        <strong class="important">主要目標</strong>：提升AI透明度與可追溯性。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">功能</strong>：事件通知和提醒、治理數據捕獲、運營監控（不包括<span class="tech-term">AI</span>自動決策，不需人類監管）。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">模型註冊、打包和部署</strong>：關鍵作用是提高模型的可管理性。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">運作原理詳解</strong>：MLOps旨在將機器學習模型的開發(Dev)與維運(Ops)流程自動化、標準化。它涵蓋了從數據準備、模型訓練、版本控制、部署、監控到再訓練的整個生命週期，目標是讓AI專案的交付更快速、更可靠、更具可追溯性。
+    </div>
+
+    <div class="white-talk">
+        <strong>白話比喻</strong>：想像你訓練了一個非常聰明的AI機器人（AI模型），MLOps就是一套「機器人工廠的管理系統」。它負責確保機器人從「設計圖紙」到「生產線」再到「出貨上崗」以及「售後維護」的整個生命週期都順暢、高效、不出錯。
+    </div>
+
+    <div class="error-analysis">
+        <div class="error-title">錯題詳解：容器化技術（如<span class="tech-term">Docker</span>）在<span class="tech-term">AI</span>模型部署的作用為何？</div>
+        <p><span class="correct-answer">正確答案：(C) 建立可攜、可重複的執行環境</span></p>
+        <p><strong class="important">解釋</strong>：容器化是一種將應用程式及其所有依賴項打包到一個輕量級、獨立的可執行單元（稱為「容器」）中的技術。Docker是最受歡迎的容器化平台之一。它解決了環境依賴性問題，使得模型從開發到部署都能在一致的環境中運行。</p>
+        <div class="white-talk">
+            <strong>白話比喻</strong>：Docker容器就像一個「超級貨櫃」。你把你的機器人（AI模型）和它需要的「專屬電力線」、「特定型號的螺絲刀」、「精確的操作說明書」全部裝進這個貨櫃。當你把這個貨櫃運到任何地方，只要這個地方能啟動貨櫃，機器人就能在裡面按照你預設的環境正常工作，不會因為外部環境的變化而「水土不服」。
+        </div>
+        <p><strong class="important">其他選項為何不正確</strong>：</p>
+        <ul>
+            <li>(A) 儲存數據：容器本身不是主要用於儲存大量持久性數據的技術。</li>
+            <li>(B) 壓縮圖檔：與壓縮圖檔的功能無關。</li>
+            <li>(D) 增加訓練次數：它本身不直接增加模型的訓練次數。</li>
+        </ul>
+    </div>
+
+    <div class="error-analysis">
+        <div class="error-title">錯題詳解：<span class="tech-term">MLOps</span>能改善哪些<span class="tech-term">AI</span>運營問題？</div>
+        <p><span class="correct-answer">正確答案：(B) 模型不穩定、版本混亂、部署不一致</span></p>
+        <p><strong class="important">解釋</strong>：MLOps旨在將AI/ML模型的開發、部署、監控和維護流程自動化和標準化，以提高模型的可靠性、效率和可擴展性。它解決了沒有MLOps時常見的模型性能下降、數據/模型版本管理困難以及不同環境部署不一致等問題。</p>
+        <p><strong class="important">其他選項為何不正確</strong>：</p>
+        <ul>
+            <li>(A) 訓練速度慢：通常是硬體資源、演算法效率或數據量大的問題，MLOps更側重於流程的自動化和標準化。</li>
+            <li>(C) 設計不夠美觀：這是使用者界面/使用者體驗（UI/UX）設計的問題。</li>
+            <li>(D) 檔案命名錯誤：這是一個基本的檔案管理或程式碼編寫規範問題。</li>
+        </ul>
+    </div>
+
+    <div class="error-analysis">
+        <div class="error-title">錯題詳解：自動化<span class="tech-term">retrain</span>（再訓練）最重要的觸發條件為何？</div>
+        <p><span class="correct-answer">正確答案：(B) 模型準確率下降或漂移指標觸發</span></p>
+        <p><strong class="important">解釋</strong>：自動化再訓練是指模型在部署到生產環境後，一旦滿足某些預設條件，系統會自動啟動對模型的重新訓練過程。這確保了模型能夠適應數據變化，維持其高性能。最重要的觸發條件是數據漂移<span class="tech-term">(Data Drift)</span>（實際輸入數據分佈與訓練時不同）或模型漂移<span class="tech-term">(Model Drift)</span>/性能下降<span class="tech-term">(Performance Degradation)</span>（模型在生產環境中的性能指標下降）。</p>
+        <div class="white-talk">
+            <strong>白話比喻</strong>：想像你訓練了一位聰明的銷售員（AI模型），他一開始表現很好。自動化再訓練就是當你發現這位銷售員的「業績開始下滑」，或者「市場的流行趨勢變了」（數據漂移），你不需要手動去安排，系統會自動把他叫回來，讓他「學習新的銷售技巧和市場知識」（再訓練），然後再讓他上崗。
+        </div>
+        <p><strong class="important">其他選項為何不正確</strong>：</p>
+        <ul>
+            <li>(A) 使用者請求：這不是主要的「自動化」觸發條件。</li>
+            <li>(C) GPU過熱：這是硬體或基礎設施管理問題。</li>
+            <li>(D) 使用人數變少：這是一個業務問題，不直接作為自動化再訓練的技術觸發條件。</li>
+        </ul>
+    </div>
+
+    <div class="section-title">AI 可解釋性與透明度 (Explainability & Transparency)</div>
+
+    <div class="key-concept">
+        <strong class="important">透明度 (Transparency)</strong>：
+        <ul>
+            <li><span class="definition">核心意義與運作原理</span>：讓AI系統的運作方式、決策邏輯和數據使用清晰可見，可供審查。</li>
+        </ul>
+        <div class="white-talk">
+            <strong>白話比喻</strong>：透明度就像讓AI模型「打開黑箱」，把它的運作過程、為什麼會這樣判斷都攤開來，讓大家都能看清楚，這樣才能建立信任。
+        </div>
+        <ul>
+            <li><span class="definition">提升措施</span>：提供決策過程說明、允許用戶查詢AI推薦依據、確保AI訓練數據公開透明。</li>
+            <li><span class="definition">提升信任</span>：提高AI透明度、確保AI可解釋性、注重數據隱私與公平性都可以增強用戶對AI技術的信任。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">可解釋性 (Explainability, XAI)</strong>：
+        <ul>
+            <li><span class="definition">主要目的與運作原理</span>：讓人類能夠理解<span class="tech-term">AI</span>模型做出決策的原因和過程。</li>
+        </ul>
+        <div class="white-talk">
+            <strong>白話比喻</strong>：想像一位醫生使用AI輔助診斷系統，AI建議某位病人罹患癌症的機率很高。如果這是一個「黑箱」模型，醫生無法知道AI的判斷依據。但如果具備可解釋性(XAI)，系統可以同時顯示出它做出判斷的關鍵區域（如X光片上的某個可疑陰影），讓醫生可以結合自己的專業知識進行最終確認，從而建立信任並做出更可靠的決策。
+        </div>
+        <ul>
+            <li><span class="definition">重要性</span>：有助於理解模型決策、建立信任、發現偏見和錯誤。</li>
+            <li><span class="definition">提升措施</span>：提供決策依據、記錄AI行為、讓使用者獲取模型運作資訊。</li>
+            <li><span class="definition">功能</span>：提供決策過程的透明度、增強模型的可理解性、幫助監管機構審查AI模型（不包括完全消除<span class="tech-term">AI</span>偏差）。</li>
+            <li><span class="definition">局部說明 (Local Explanation)</span>：提供單一預測的解釋或單次預測的影響分析。</li>
+            <li><span class="definition">全域說明 (Global Explanation)</span>：主要適用於了解<span class="tech-term">AI</span>模型的整體決策方式。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">透明度與可解釋性對AI的重要性</strong>：增強信任、發現潛在風險、促進公平決策。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">黑箱模型 (Black Box Models)</strong>：難以理解模型決策過程，導致問責困難和信任度降低，特別是在高風險決策場景。
+    </div>
+
+    <div class="section-title">AI 生態系與趨勢</div>
+
+    <div class="key-concept">
+        <strong class="important">AI利害關係人</strong>：包括開發人員、使用者、政府機構。利害關係人參與AI開發與監管，可確保透明度、減少風險、促進公平使用。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">AI素養 (AI Literacy)</strong>：讓員工理解AI的基本概念、應用潛力、倫理挑戰和限制，以便更好地與AI協作。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">可持續發展 (Sustainability)</strong>：
+        <ul>
+            <li><span class="definition">運作原理與實際案例</span>：企業可透過AI優化物流路線、減少碳排放和降低資源浪費來促進可持續發展。</li>
+            <li><span class="definition">挑戰</span>：訓練大型AI模型所需的巨大運算能力會導致大量的碳排放、水資源消耗及其他環境影響。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">AI即服務 (AI as a Service, AIaaS)</strong>：
+        <ul>
+            <li><span class="definition">優勢</span>：透過雲端提供AI模型和工具，降低企業導入AI的技術門檻和成本。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">模型壓縮 (Model Compression)</strong>：
+        <ul>
+            <li><span class="definition">目的與運作原理</span>：縮小模型體積、降低運算需求，使其能在資源受限的設備上高效運行，例如將大型模型部署到手機等邊緣設備上。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">知識圖譜 (Knowledge Graph)</strong>：
+        <ul>
+            <li><span class="definition">運作原理</span>：透過結構化方式表示實體及其關係，提升AI的理解、推理和解釋能力。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">邊緣AI (Edge AI)</strong>：
+        <ul>
+            <li><span class="definition">優勢</span>：在設備本地端進行AI運算，減少延遲、保護隱私和節省頻寬。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">AIGC（AI Generated Content）的版權歸屬</strong>：涉及原創性認定、創作者權利、使用權限和商業應用等複雜法律議題。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">AI生成內容的品質與版權</strong>：使用生成式AI生成的內容時，應適當標注引用來源以確保內容品質，避免抄襲並尊重智慧財產權。
+        <ul>
+            <li><span class="tech-term">抄襲 (Plagiarism)</span>：指大型語言模型和圖像生成AI可能學習並複製特定的風格，甚至直接複製內容，從而引發抄襲的疑慮。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">用戶欺騙 (User Spoofing)</strong>：AI生成圖像的能力，使得創建可信的線上個人資料和虛假身份變得前所未有的容易。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">AI發展趨勢</strong>：生成式AI從過去的「工具」演變為「工具人」（多才多藝，沒有單一功能，更接近人類，如ChatGPT、Gemini、Copilot等）。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">多模態AI</strong>：結合影像、文字、語音等不同形式數據的AI應用。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">AI應用開發工具</strong>：Google Cloud的Vertex AI。
+    </div>
+
+    <div class="comparison-table">
+        <div class="key-concept">
+            <strong class="important">Azure OpenAI <span class="vs">與</span> Azure AI 服務 (比較)</strong>：Azure OpenAI提供基於OpenAI的大型語言模型，主要用於生成式AI應用；Azure AI服務則包含更廣泛的AI服務。其主要優勢是可獲取預訓練模型，直接使用或進行微調，大大降低開發門檻和成本。
+        </div>
+    </div>
+    
+    <div class="key-concept">
+        <strong class="important">AI助手</strong>：
+        <ul>
+            <li><span class="definition">運作原理與目的</span>：LLM推動了AI助理的發展，其主要作用是提供任務輔助，提升效率和創意。</li>
+            <li><span class="definition">開發者利用LLM構建AI助手</span>：可透過聊天室窗進行交互，並根據需求進行定制。</li>
+            <li><span class="definition">影響商業用戶工作方式</span>：協助撰寫初稿、資訊蒐集、策略規劃等。</li>
+            <li><span class="definition">部署後交互方式</span>：透過聊天室窗發送查詢並獲取回應。</li>
+            <li><span class="definition">實際案例</span>：<span class="tech-term">Microsoft Copilot</span>的主要目標是提升工作智慧、效率和創造力。與Microsoft必應(Bing)結合的優勢是提供上下文相關答案。</li>
+        </ul>
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">台灣本土AI發展</strong>：<span class="tech-term">TAIDE</span>是台灣本土開發的大型語言模型計畫，強調語料安全與本地語言文化。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">線上設計工具</strong>：<span class="tech-term">Canva</span>透過整合AI功能簡化視覺設計流程。
+    </div>
+
+    <div class="key-concept">
+        <strong class="important">NotebookLM</strong>：其<span class="tech-term">Audio Overview</span>功能能將筆記轉換為兩位AI主播對話podcast。
+    </div>
+
+    <div class="error-analysis">
+        <div class="error-title">錯題詳解：<span class="tech-term">TWCC</span>（台灣<span class="tech-term">AI</span>雲端運算平台）主要建置於哪一類架構？</div>
+        <p><span class="correct-answer">正確答案：(C) HPC高效能運算叢集</span></p>
+        <p><strong class="important">解釋</strong>：TWCC是國家高速網路與計算中心（NCHC）提供的國家級AI雲端運算服務。HPC(High-Performance Computing)叢集是由大量計算機節點（通常包含多個CPU和大量的GPU）透過高速網路互連組成的系統。這些叢集被設計用來執行需要極高計算能力的任務，例如科學模擬、大數據分析以及最重要的——大型AI模型的訓練。</p>
+        <div class="white-talk">
+            <strong>白話比喻</strong>：想像TWCC就像一個超級大的「超級電腦農場」，裡面有成千上萬台功能強大的電腦連接在一起，專門用來處理那些需要巨大計算能力的AI任務。
+        </div>
+        <p><strong class="important">其他選項為何不正確</strong>：</p>
+        <ul>
+            <li>(A) ARM嵌入式系統：通常用於小型化設備中的低功耗處理器，不具備執行大型AI模型訓練所需的巨大運算能力。</li>
+            <li>(B) 邊緣運算平台：指將計算盡可能地靠近數據生成的地方，TWCC這樣的大型雲端平台主要提供集中式、大規模的訓練和開發能力。</li>
+            <li>(D) 分散式資料庫：是一種資料儲存和管理架構，雖然TWCC可能會搭配分散式資料庫來儲存數據，但其核心運算能力來自HPC叢集。</li>
+        </ul>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; padding: 20px; background-color: #e8f4fd; border-radius: 10px;">
+        <h2 style="color: #2c3e50; margin-bottom: 10px;">📚 筆記整理完成</h2>
+        <p style="color: #495057; font-size: 1.1em;">此份筆記涵蓋了AI應用規劃師考試科目二的完整內容，包含電腦視覺、自然語言處理、生成式AI、No-Code/Low-Code平台、AI治理與倫理、企業AI導入流程等重要主題。</p>
+        <p style="color: #6c757d; font-style: italic;">建議搭配錯題詳解和白話比喻來加深理解，祝考試順利！</p>
+    </div>
+</body>
