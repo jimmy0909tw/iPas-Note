@@ -3,10 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>AI應用規劃師筆記(2025年8月版本)</title>
+  <!-- Google Fonts Noto Sans Bold -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
+  <style>
+    h1 {
+      font-family: 'Noto Sans TC', sans-serif;
+      font-weight: 700;
+    }
+    .subject-btn {
+      font-size: 1.5rem;
+      padding: 1rem 2.5rem;
+      margin: 1rem 1rem 0 0;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      color: #fff;
+      transition: background 0.2s;
+    }
+    .subject-btn:first-child {
+      background: #1976d2;
+    }
+    .subject-btn:last-child {
+      background: #43a047;
+    }
+    .subject-btn:hover {
+      filter: brightness(1.1);
+    }
+  </style>
 </head>
 <body>
   <h1>AI應用規劃師筆記(2025年8月版本)</h1>
-  <button onclick="window.location.href='Subject1.html'">科目一</button>
-  <button onclick="window.location.href='Subject2.html'">科目二</button>
+  <button class="subject-btn" onclick="window.location.href='Subject1.html'">科目一</button>
+  <button class="subject-btn" onclick="window.location.href='Subject2.html'">科目二</button>
 </body>
 </html>
